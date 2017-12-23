@@ -12,13 +12,6 @@ class sort
             list[pos1] = list[pos2];
             list[pos2] = temp;
         }
-        
-#if 0
-        static void swap(string *list, int pos1, int pos2)
-        {
-            list[pos1].swap(list[pos2]);
-        }
-#endif
 
         template <typename TYPE> static void printList(TYPE *list, int size)
         {

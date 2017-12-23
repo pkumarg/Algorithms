@@ -7,7 +7,7 @@ TARGET=$(patsubst %.cpp, %, $(SRC))
 all: $(TARGET)
 
 %:%.cpp
-			$(CC) $^ -o $@
+	$(CC) $^ -o $@
 
 clean:
 	rm -f $(TARGET)
