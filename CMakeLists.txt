@@ -2,8 +2,14 @@ cmake_minimum_required (VERSION 2.6)
 
 project (Algorithm)
 
-add_executable(splitWhiteSpace ./string/splitWhiteSpace.cpp)
-add_executable(search ./search/search.cpp)
-add_executable(addtoLinkedListNum ./other/addtoLinkedListNum.cpp)
-add_executable(royalNames ./other/royalNames.cpp)
-add_executable(sort ./sort/sort.cpp)
+set(CMAKE_CXX_FLAGS "-g")
+
+add_executable(algoTest "src/test/testMain.cpp")
+
+target_include_directories(algoTest PRIVATE
+    "src"
+    "src/sort"
+    "src/search"
+    "src/string"
+    "src/other"
+    )

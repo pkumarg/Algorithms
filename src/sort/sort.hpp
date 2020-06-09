@@ -1,6 +1,6 @@
 #include <iostream>
 
-class sort
+class Sort
 {
     public:
         template <typename TYPE> static void swap(TYPE *list, uint32_t pos1, uint32_t pos2)
@@ -23,7 +23,7 @@ class sort
             std::cout << std::endl;
         }
 
-        template <typename TYPE> static void insertion_sort(TYPE *list, uint32_t size)
+        template <typename TYPE> static void insertionSort(TYPE *list, uint32_t size)
         {
             // Lets assume element at pos 0 is at correct place so start with
             // pos 1
@@ -46,7 +46,7 @@ class sort
             }
         }
 
-        template <typename TYPE> static void selection_sort(TYPE *list, uint32_t size)
+        template <typename TYPE> static void selectionSort(TYPE *list, uint32_t size)
         {
             uint32_t iter_i;
             uint32_t iter_j;
@@ -68,50 +68,3 @@ class sort
             }
         }
 };
-
-int main(int argc, char *argv[])
-{
-    uint8_t testAlgoChoice = 1;
-    const ssize_t listSize = 10;
-    int list[listSize] = {9, 17, 5, 22, 25 , 27, 1, 8, 3, 11};
-    std::string strList[listSize] = {
-        "Pushpendra",
-        "Anu",
-        "Sonu",
-        "Rakesh",
-        "Dharam",
-        "Gorav",
-        "Rishi",
-        "Sujeet",
-        "Dhiraj",
-        "Monika"
-    };
-
-#if 0
-    std::cout << "Unsorted list: ";
-    sort::printList(list, listSize);
-    sort::insertion_sort(list, listSize);
-    std::cout << "Sorted list: ";
-    sort::printList(list, listSize);
-
-    std::cout << "Unsorted strList: ";
-    sort::printList(strList, listSize);
-    sort::insertion_sort(strList, listSize);
-    std::cout << "Sorted strList: ";
-    sort::printList(strList, listSize);
-#endif
-
-    std::cout << "\n\nUnsorted list: ";
-    sort::printList(list, listSize);
-    sort::selection_sort(list, listSize);
-    std::cout << "Sorted list: ";
-    sort::printList(list, listSize);
-
-    std::cout << "Unsorted strList: ";
-    sort::printList(strList, listSize);
-    sort::selection_sort(strList, listSize);
-    std::cout << "Sorted strList: ";
-    sort::printList(strList, listSize);
-
-    return 0;
-}
