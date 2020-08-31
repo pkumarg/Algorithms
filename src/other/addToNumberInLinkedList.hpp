@@ -64,6 +64,7 @@ int addNumToList(Node *pList, int val)
     return carry;
 }
 
+#if 0
 int main()
 {
     pushNode(&head_ref, 9);
@@ -86,3 +87,4 @@ int main()
 
     return 0;
 }
+#endif
